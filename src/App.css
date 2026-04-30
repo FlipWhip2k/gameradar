@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url("/wp12249999.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* HEADER */
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 70px;
+  color: #ff4fd8;
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 25px #ff4fd8,
+    0 0 40px #ff4fd8;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #eaeaea;
+}
+
+/* CONTROLS */
+
+.controls {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(15, 15, 40, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 79, 216, 0.4);
+}
+
+.controls input,
+.controls select {
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  font-size: 15px;
+  border: 2px solid #ff4fd8;
+  box-shadow:
+    0 0 10px #ff4fd8,
+    0 0 20px #ff4fd8;
+}
+
+/* GRID */
+
+.game-grid {
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 0 30px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+/* 🔥 NEON PULSE */
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px #ff4fd8, 0 0 20px #ff4fd8;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff4fd8, 0 0 40px #ff4fd8;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff4fd8, 0 0 20px #ff4fd8;
+  }
+}
+
+/* GAME CARD */
+
+.game-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  color: #ff4fd8;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+
+  border: 2px solid #ff4fd8;
+
+  animation: neonPulse 2.5s infinite;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+
+  box-shadow:
+    0 0 10px #ff4fd8,
+    0 0 20px #ff4fd8;
+}
+
+/* HOVER */
+
+.game-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  filter: brightness(1.1);
+
+  box-shadow:
+    0 0 15px #ff4fd8,
+    0 0 30px #ff4fd8,
+    0 0 50px #ff4fd8;
+
+  animation: neonPulse 1s infinite;
+}
+
+/* IMAGE */
+
+.game-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+/* TEXT */
+
+.game-info {
+  padding: 15px;
+}
+
+.game-info h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 8px #ff4fd8;
+}
+
+.game-info p {
+  margin: 6px 0;
+  color: #dcdcdc;
+}
+
+.game-info p:nth-child(2) {
+  color: #ffe600;
+  font-weight: bold;
+}
+
+/* DETAILS */
+
+.details-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid #ff4fd8;
+  box-shadow: 0 0 10px #ff4fd8;
+}
+
+.details-card {
+  background: rgba(0, 0, 0, 0.9);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #ff4fd8;
+  box-shadow: 0 0 20px #ff4fd8;
+}
+
+.details-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* 🔽 PAGINATION (CENTERED + BIG + NEON) */
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 40px auto 90px;
+}
+
+.pagination span {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 20px #ff4fd8;
+}
+
+.pagination button {
+  background: black;
+  color: white;
+  border: 3px solid #ff4fd8;
+  padding: 16px 40px;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px #ff4fd8,
+    0 0 28px #ff4fd8,
+    0 0 45px #ff4fd8;
+
+  transition: 0.25s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 20px #ff4fd8,
+    0 0 45px #ff4fd8,
+    0 0 70px #ff4fd8;
+}
+
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
