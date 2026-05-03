@@ -21,7 +21,6 @@ body::before {
   z-index: -1;
 }
 
-/* HEADER */
 
 .hero {
   text-align: center;
@@ -43,7 +42,6 @@ body::before {
   color: #eaeaea;
 }
 
-/* CONTROLS */
 
 .controls {
   max-width: 1000px;
@@ -72,7 +70,6 @@ body::before {
     0 0 20px #ff4fd8;
 }
 
-/* GRID */
 
 .game-grid {
   max-width: 1300px;
@@ -83,7 +80,6 @@ body::before {
   gap: 30px;
 }
 
-/* 🔥 NEON PULSE */
 
 @keyframes neonPulse {
   0% {
@@ -97,7 +93,6 @@ body::before {
   }
 }
 
-/* GAME CARD */
 
 .game-card {
   position: relative;
@@ -118,7 +113,6 @@ body::before {
     0 0 20px #ff4fd8;
 }
 
-/* HOVER */
 
 .game-card:hover {
   transform: translateY(-10px) scale(1.05);
@@ -132,7 +126,6 @@ body::before {
   animation: neonPulse 1s infinite;
 }
 
-/* IMAGE */
 
 .game-card img {
   width: 100%;
@@ -141,7 +134,6 @@ body::before {
   filter: brightness(0.85);
 }
 
-/* TEXT */
 
 .game-info {
   padding: 15px;
@@ -164,7 +156,6 @@ body::before {
   font-weight: bold;
 }
 
-/* DETAILS */
 
 .details-page {
   max-width: 1100px;
@@ -201,7 +192,6 @@ body::before {
   object-fit: cover;
 }
 
-/* 🔽 PAGINATION (CENTERED + BIG + NEON) */
 
 .pagination {
   width: 100%;
@@ -252,7 +242,6 @@ body::before {
   cursor: not-allowed;
 }
 
-/* MOBILE */
 
 @media (max-width: 750px) {
   .details-card {
